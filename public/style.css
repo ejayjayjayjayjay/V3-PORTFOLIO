@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto+Slab:wght@500;700&family=Roboto:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    overflow-x: hidden;
+}
+
+.navbar-toggler {
+    z-index: 500;
+}
+
+/* HOVER EFFECT ON H1 */
+
+h1::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+h1::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background: #FFC090;
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+h1 {
+    position: relative;
+    font-size: 5rem;
+}
+
+/* CSS ZOOM ANIMATION ON MY PORTFOLIO IMG  */
+
+.portfolio-item img{
+    padding: 15px;
+    transition: transform .2s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+.portfolio-item img:hover {
+    transform: scale(1.2);
+  }
